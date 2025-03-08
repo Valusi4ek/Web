@@ -1,0 +1,59 @@
+
+header {
+	text-align: center;
+	font-size: 20px; 
+}
+.disclimer {
+	background-color: red;
+}
+nav {
+	overflow: hidden;
+	padding-left: 20px; padding-right: 20px;
+	text-align: center;
+	font-size: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav dl{
+	width: 25%;
+}
+nav dl dd{
+margin: 0;
+}
+a:hover {
+	color: red;
+}
+body {
+	background-color: black;
+	color: white;
+}
+label, form {
+	color: white;
+	text-align: center;
+}
+dt, td {
+		font-size:25px;
+		text-align:center;
+}
+a {
+	color:#FFFFFF
+	}
+section {
+	text-align: center;
+	color:#FFFFFF;
+}
+h1 {
+	font-size:60px; margin-bottom:0;
+}
+.appeal {
+	font-size:25px;
+	padding-left:200px; 
+	padding-right:200px; 
+	padding-top:0px;
+}
+footer {
+	text-align:center; 
+	font-size:25px; 
+	color:#B22222
+}
