@@ -4,7 +4,7 @@ header {
 	font-size: 20px; 
 }
 .disclimer {
-	border: 5px solid white;
+	border: 2px solid white;
 	border-radius: 15px;
 	padding: 0px 20px;
 	margin: 0px 50px;
@@ -46,7 +46,12 @@ a:hover {
 }
 body {
 	background-color: black;
-	color: white;
+	background-image: url("E:/Обучение/Web/Images/fon_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	color: #FFFFFF;
 }
 label, form {
 	color: white;
@@ -91,4 +96,17 @@ img {
 .titul {
 	width: 500px;
 	hight: 200px;
+}
+table, td, th {
+	border:2px solid;
+	border-collapse: collapse;
+}
+thead th:nth-child(1) {
+	width: 25%;
+}
+thead th:nth-child(2) {
+	width: 30%;
+}
+thead th:nth-child(3) {
+	width: 100%;
 }
