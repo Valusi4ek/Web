@@ -8,7 +8,7 @@ header {
 	border-radius: 15px;
 	padding: 0px 20px;
 	margin: 0px 50px;
-	background-color: maroon;
+	background-image: linear-gradient(black, red);
 	font-size: 25px;
 	font-family: "DejaVu Sans Mono", monospace;
 	font-weight: 600;
@@ -32,7 +32,7 @@ margin: 0;
 a:link, a:visited {
 	border: 2px solid white;
 	border-radius: 5px;
-	background-color: maroon;
+	background-image: linear-gradient(black, maroon);
 	text-decoration: none;
 	display: inline-block;
 	padding-left: 5px;
@@ -40,9 +40,8 @@ a:link, a:visited {
 }
 a:hover {
 	border: 2px solid maroon;
-	background-color: black;
-	color: maroon;
-	transition: background-color 400ms;
+	background-image: linear-gradient(maroon, black);
+	transition: background-color 2s;
 }
 body {
 	background-color: black;
@@ -70,7 +69,8 @@ section {
 	color:#FFFFFF;
 }
 h1 {
-	font-size:60px; margin-bottom:0;
+	font-size:60px;
+	position: relative;
 }
 .appeal {
 	font-family: Courier New, monospace;
@@ -109,4 +109,7 @@ thead th:nth-child(2) {
 }
 thead th:nth-child(3) {
 	width: 100%;
+}
+span {
+	vertical-align: 30px;
 }

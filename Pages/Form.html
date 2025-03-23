@@ -6,28 +6,22 @@
 		<link rel="stylesheet" type="text/css" href="..\CSS\styles.css">
 	</head>
     <body>
-        <h1 style="text-align: center">Форма сбора данных</h1>
+        <h1 id="demo" style="text-align: center"></h1>
         <script>
-                document.getElementById("demo").innerHTML="Форма сбора личных данных"
+            //Просто текст. Непонятно зачем.
+            document.getElementById("demo").innerHTML="Форма сбора личных данных"
+            alert("Я даю согласие на обработку персональных данных")
         </script>
-        <div style="text-align:center; color: white;">
-            <canvas id="myCanvas" width="800px" height="80" style="border: 4px solid#a7a3a3">
+        <div style="text-align:center";>
+            <canvas id="myCanvas" width="800px" height="80" style="border: 3px solid white">
             </canvas>
             <script>
-                const canvas = document.getElementById("myCanvas");
-                const ctx = canvas.getContext("2d");
-                ctx.font = "25px Arial";
-
-                let randomNumber = Math.floor(Math.random() * 3)
-                if (randomNumber == 0) {
-                    ctx.fillStyle = "blue";
-                } else if (randomNumber == 1) {
-                    ctx.fillStyle = "red";
-                } else if (randomNumber == 2) {
-                    ctx.fillStyle = "green";
-                }
-
-                ctx.fillText("Внимание! Данный сбор абсолютно конфиденциален!", 75, 45);
+                //Текст в рамке(canvas)
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+               ctx.font="25px Arial";
+               ctx.fillStyle="white"
+               ctx.fillText("Внимание! Сбор данных абсолютно конфиденциален!",75,45)
             </script>
         </div>
         <form action="abakan77184@gmail.com" method="get">
