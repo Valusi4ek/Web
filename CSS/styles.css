@@ -45,12 +45,13 @@ a:hover {
 }
 body {
 	background-color: black;
-	background-image: url("E:/Обучение/Web/Images/fon_2.jpg");
+	background-image: url("../Images/fon_2.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 	color: #FFFFFF;
+	text-align: center;
 }
 label, form {
 	color: white;
@@ -112,4 +113,21 @@ thead th:nth-child(3) {
 }
 span {
 	vertical-align: 30px;
+}
+#test {
+	font-size: 25px;
+	text-align: center;
+}
+#test1 {
+	font-size: 25px;
+	text-align: center;
+}
+#test2 {
+	font-size: 25px;
+	text-align: center;
+}
+form {
+	margin: auto;
+	width: 500px;
+	border: 3px solid white;
 }
