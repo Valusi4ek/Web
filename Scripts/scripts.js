@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
   case 3: day="среда"; break;
   case 4: day="четверг"; break;
   case 5: day="пятница"; break;
-  default: day="выходной"
+  default: day="выходной"; break
  }
  document.getElementById("day").innerHTML="Сегодня "+day;
 });
+// Функция, которая выводит текст в зависимости от изображения
+function showMessage(image) {
+ const message = image.dataset.text;  // Берём текст из data-атрибута
+ document.getElementById('res').innerHTML = message;
+}

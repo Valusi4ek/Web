@@ -131,3 +131,59 @@ form {
 	width: 500px;
 	border: 3px solid white;
 }
+.way {
+	display: inline-block;
+	justify-content: space-between;
+	width: 200px;
+	height: 200px;
+	margin: 50px 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.way:hover {
+	transform: scale(1.1);
+}
+#res {
+	font-size: 25px;
+	font-family: Verdana;
+	background-image: linear-gradient(maroon, white 100%);
+	/* обрезаем фон по тексту */
+	-webkit-background-clip: text;
+	/* меняет цвет текста заголовка на прозрачный что бы можно было увидеть градиент*/
+	-webkit-text-fill-color: transparent;
+}
+#youway {
+	font-size: 25px;
+	font-family: Verdana;
+	background-image: linear-gradient(#FFFAFA, maroon 100%);
+	/* обрезаем фон по тексту */
+	-webkit-background-clip: text;
+	/* меняет цвет текста заголовка на прозрачный что бы можно было увидеть градиент*/
+	-webkit-text-fill-color: transparent;
+}
+.text1 {
+	font-size: 25px;
+	font-family: Verdana;
+}
+#day {
+	font-size: 30px;
+	font-family: Verdana;
+	background-image: linear-gradient(#FFFAFA, maroon 100%);
+	/* обрезаем фон по тексту */
+	-webkit-background-clip: text;
+	/* меняет цвет текста заголовка на прозрачный что бы можно было увидеть градиент*/
+	-webkit-text-fill-color: transparent;
+}
+#result {
+	font-size: 30px;
+	font-family: Verdana;
+	background-image: linear-gradient(#FFFAFA, maroon 100%);
+	/* обрезаем фон по тексту */
+	-webkit-background-clip: text;
+	/* меняет цвет текста заголовка на прозрачный что бы можно было увидеть градиент*/
+	-webkit-text-fill-color: transparent;
+}
+.image {
+	width: 200px;
+	height: auto;
+}

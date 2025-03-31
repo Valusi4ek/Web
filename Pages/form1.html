@@ -2,9 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>JS и форма</title>
+  <title>JS и формы</title>
   <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
-  <script src="../Scripts/scripts.js" type="application/javascript"></script>
+  <script>
+    let count=0, message="";
+  </script>
 </head>
 <body>
   <h2>Проверка возраста</h2>
@@ -14,6 +16,24 @@
       <button type="submit">Проверить</button>
     </form>
   <p id="result"></p>
+  <p class="text1">День недели</p>
   <h2 id="day"></h2>
+  <p class="text1">Нажми на кнопку...</p>
+  <img class="image" src="../Images/button.png" onclick="count++;
+  if (count==1)
+  {message='Вы нажали всего один раз! Продолжайте!';}
+  else if (count>=2 && count<=5)
+  {message=`Вы нажали всего ${count} раз... Не сдавайтесь`;}
+  else
+  {message=`Молодец! Ты смог нажать ${count} раз!`;}
+  document.getElementById('rez').innerHTML=message;">
+  <p id="rez"></p>
+  <h2 id="youway">Выбери свой путь</h2>
+  <img class="way" src="../Images/samurai1.jpg" data-text="Ты выбрал путь Воина!" onclick="showMessage(this)">
+  <img class="way" src="../Images/samurai2.jpg" data-text="Ты выбрал путь Тени!" onclick="showMessage(this)">
+  <img class="way" src="../Images/samurai3.jpg" data-text="Ты выбрал путь Мудреца!" onclick="showMessage(this)">
+  <img class="way" src="../Images/samurai4.jpg" data-text="Ты выбрал путь Мага!" onclick="showMessage(this)">
+  <p id="res"></p>
+  <script src="../Scripts/scripts.js" type="application/javascript"></script>
 </body>
 </html>
