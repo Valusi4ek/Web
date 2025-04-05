@@ -187,3 +187,109 @@ form {
 	width: 200px;
 	height: auto;
 }
+/* Контейнер слайдера */
+.slider {
+	margin: 0 auto; /* Центрирует по горизонтали */
+	width: 500px; /* Фиксированная ширина */
+	height: 400px; /* Увеличиваем высоту */
+	overflow: hidden; /* Скрываем выходящие за границы изображения */
+	position: relative;
+}
+/* Контейнер, в котором будут находиться все слайды */
+.slides {
+	height: 100%; /* Наследуем высоту от .slider */
+	display: flex; /* Располагаем слайды в ряд */
+	width: 700%; /* Делаем ширину в семь раза больше (по количеству слайдов) */
+	transition: transform 0.5s ease-in-out; /* Плавное переключение слайдов */
+}
+/* Каждый отдельный слайд */
+.slide {
+	height: 100%; /* Делаем так, чтобы изображения занимали всю высоту слайда */
+	object-fit: contain; /* Гарантируем, что изображения не будут обрезаны и не исказятся */
+	width: 14.2857%; /* Учитываем количество слайдов */
+	position: relative; /* Добавляем для корректного позиционирования caption */
+	display: flex; /* Делаем flex-контейнер */
+	flex-direction: column; /* Располагаем элементы в колонку */
+	align-items: center; /* Выравниваем по центру */
+	text-align: center; /* Центрируем текст */
+}
+.slide img {
+	width: 100%; /* Картинки растягиваются на весь слайд */
+	display: block; /* Убираем пробелы вокруг изображений */
+	max-width: 100%;
+	max-height: 100%; /* Ограничение по высоте */
+	object-fit: contain; /* Вписывает изображение, добавляя пустые области */
+	display: block;
+}
+/* Контейнер для точек управления (индикаторов) */
+.controls {
+	display: flex;
+	justify-content: center;
+	gap: 10px; /* Отступ между кнопками */
+	margin-top: 10px; /* Отступ сверху от слайдера */
+}
+/* Стиль для точек переключения */
+.controls label {
+	display: inline-block; /* Размещаем точки в строку */
+	width: 15px; /* Размер точки */
+	height: 15px;
+	background: gray; /* Серый цвет точки */
+	border-radius: 50%; /* Делаем точки круглыми */
+	margin: 5px; /* Добавляем небольшой отступ между ними */
+	cursor: pointer; /* Делаем курсор в виде руки при наведении */
+}
+/* Меняем цвет активной точки при выборе слайда */
+input:checked + label {
+	background: black;
+}
+.prev, .next {
+	position: absolute;
+	top: 50%; /* Центр по вертикали */
+	transform: translateY(-50%); /* Центрируем относительно высоты */
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	z-index: 10;
+}
+/* Позиционируем кнопку «Назад» слева */
+.prev {
+	left: 10%;
+}
+/* Позиционируем кнопку «Вперёд» справа */
+.next {
+	right: 10%;
+}
+.caption {
+	position: absolute; /* Размещаем поверх изображения */
+	bottom: 10px; /* Отступ от нижнего края */
+	left: 50%; /* Выравниваем по центру */
+	transform: translateX(-50%); /* Центрируем по горизонтали */
+	color: white; /* Белый текст */
+	padding: 5px 10px; /* Внутренние отступы */
+	font-size: 20px; /* Размер шрифта */
+	border-radius: 5px; /* Закругляем углы */
+	text-align: center;
+	width: max-content; /* Чтобы текст не сжимался */
+	word-wrap: break-word; /* Переносим длинные слова */
+	margin-top: 10px; /* Отступ сверху, чтобы текст не прилипал к картинке */
+	max-width: 90%; /* Чтобы текст не растягивался слишком широко */
+}
+@media (max-width: 480px) {
+	.slider {
+		max-width: 100%; /* Растягиваем слайдер на всю ширину экрана */
+	}
+
+	.prev, .next {
+		padding: 5px; /* Уменьшаем размер кнопок */
+		font-size: 14px; /* Делаем шрифт поменьше */
+	}
+
+	.caption {
+		font-size: 12px; /* Уменьшаем текст подписи */
+		padding: 3px 6px; /* Уменьшаем отступы */
+	}
+}
