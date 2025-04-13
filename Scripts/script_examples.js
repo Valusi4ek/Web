@@ -16,7 +16,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
   // Вывод результата на страницу
   document.getElementById("result").textContent = message;
  });
-
+//Узнаём дату
+ document.getElementById("btn_date").addEventListener("click", function() {
+  const d = new Date();
+  document.getElementById("calendar").innerHTML =
+      "Сегодня " + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+  setTimeout(() => {
+   document.getElementById("calendar").innerHTML ="";
+  },5000)
+ });
  let data=new Date();
  let day=data.getDay();
  switch(day) {
@@ -66,6 +74,14 @@ function goToSlide(index) {
 
  currentIndex = index; // Запоминаем текущий слайд
  slides.style.transform = `translateX(${-index * (100 / slideCount)}%)`; // Сдвигаем контейнер со слайдами
+
+// Удаляем класс .active у всех слайдов
+document.querySelectorAll('.slide').forEach(slide => {
+ slide.classList.remove('active');
+});
+
+// Добавляем .active к текущему слайду
+document.querySelectorAll('.slide')[index].classList.add('active');
 }
 // Добавляем обработчик клика для кнопки «Назад»
 prevButton.addEventListener('click', () => {
@@ -77,5 +93,29 @@ nextButton.addEventListener('click', () => {
 });
 // Устанавливаем первый активный слайд при загрузке страницы
 goToSlide(0);
+//Часы
+function tikTak() {
+ setInterval(oclock,1000);
+}
+function oclock() {
+ let a= new Date();
+ let hours = String(a.getHours()).padStart(2, '0');
+ let minutes = String(a.getMinutes()).padStart(2, '0');
+ let seconds = String(a.getSeconds()).padStart(2, '0');
+ document.getElementById("currenttime").innerHTML= hours+":"+minutes+":"+seconds;
+}
+// Цикличная конструкция
+let abbr="CASE";
+let i=0;
+let mess="";
+let leng=abbr.length;
+ do {
+ mess+="<li>"+abbr[i]+"</li>";
+ i++;
+}
+while (i<leng)
+document.getElementById("res_cycle").innerHTML=mess;
+
+
 
 

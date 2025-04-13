@@ -5,7 +5,8 @@
   <title>Примеры скриптов</title>
   <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
-<body>
+<body onload="tikTak()">
+  <h1 id="currenttime"></h1>
   <h2>Проверка возраста</h2>
     <form id="ageForm">
       <label for="age">Введите ваш возраст:</label>
@@ -13,6 +14,8 @@
       <button type="submit">Проверить</button>
     </form>
   <p id="result"></p>
+  <button id="btn_date">Сегодняшняя дата</button>
+  <h2 id="calendar"></h2>
   <p class="text1">День недели</p>
   <h2 id="day"></h2>
   <p class="text1">Нажми на кнопку...</p>
@@ -72,6 +75,8 @@
     <button class="prev">&#10094;</button> <!-- Кнопка "Назад" -->
     <button class="next">&#10095;</button> <!-- Кнопка "Вперёд" -->
   </div>
+  <h2>Отображение в цикле</h2>
+  <ul id="res_cycle"></ul>
   <script src="../Scripts/script_examples.js" type="application/javascript"></script>
 </body>
 </html>
